@@ -1,15 +1,16 @@
 import React from "react";
+import s from "../FeedbackOptions/FeedbackOptions.module.css";
 
 function FeedbackOptions ({options, onLeaveFeedback}) {
     return (
-      <ul className="list__button">
+      <ul className={s.list}>
 
           {options.map(option => {
               return (
-                <li className="item__button" key={option}>
+                <li className={s.item} key={option}>
                     <button 
                     type="button" 
-                    className="button" 
+                    className={s.button} 
                     name={option}
                     onClick={()=>onLeaveFeedback(option)}>{option}</button>
                 </li>
